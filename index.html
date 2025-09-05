@@ -15,16 +15,15 @@
             --darker: #0a0a0a;
             --light: #f8f8f8;
             --gray: #2a2a2a;
-            --heroku: #430098;
-            --pterodactyl: #2f3640;
+            --heroku: #6762a6;
+            --render: #5f6bff;
+            --talkdrove: #7c3aed;
+            --replit: #f26207;
+            --codespace: #0078d7;
+            --glitch: #ff7cbe;
+            --railway: #0a0a0a;
             --whatsapp: #25D366;
             --session: #00bf8f;
-            --render: #5f6bff;
-            --replit: #f26207;
-            --railway: #0a0a0a;
-            --glitch: #ff7cbe;
-            --codespace: #0078d7;
-            --talkdrove: #7c3aed;
         }
         
         * {
@@ -37,213 +36,179 @@
             font-family: 'Poppins', sans-serif;
             background: var(--darker);
             color: var(--light);
-            line-height: 1.6;
+            line-height: 1.5;
             overflow-x: hidden;
-            padding-bottom: 60px;
+            padding-bottom: 50px;
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 15px;
         }
         
         /* Category Button */
         .category-btn {
             position: fixed;
-            top: 20px;
-            right: 20px;
+            top: 15px;
+            right: 15px;
             z-index: 1001;
             background: linear-gradient(45deg, var(--primary), var(--accent));
             color: white;
             border: none;
-            border-radius: 50px;
-            padding: 12px 24px;
-            font-weight: 600;
+            border-radius: 20px;
+            padding: 8px 15px;
+            font-weight: 500;
+            font-size: 0.85rem;
             cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 8px;
-            box-shadow: 0 5px 20px rgba(138, 43, 226, 0.6);
-            transition: all 0.3s ease;
+            gap: 6px;
+            box-shadow: 0 3px 10px rgba(138, 43, 226, 0.4);
+            transition: all 0.2s ease;
         }
         
         .category-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(138, 43, 226, 0.8);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(138, 43, 226, 0.5);
         }
         
         .category-menu {
             position: fixed;
-            top: 70px;
-            right: 20px;
+            top: 50px;
+            right: 15px;
             background: var(--dark);
-            border-radius: 12px;
-            padding: 12px 0;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
+            padding: 8px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             z-index: 1001;
             display: none;
             flex-direction: column;
-            width: 220px;
-            border: 1px solid var(--primary);
+            width: 170px;
+            border: 1px solid var(--gray);
             overflow: hidden;
         }
         
         .category-menu.active {
             display: flex;
-            animation: fadeIn 0.3s ease;
         }
         
         .category-item {
-            padding: 14px 20px;
+            padding: 10px 15px;
             color: var(--light);
             text-decoration: none;
             transition: all 0.2s ease;
             display: flex;
             align-items: center;
-            gap: 12px;
-            font-weight: 500;
+            gap: 8px;
+            font-size: 0.85rem;
         }
         
         .category-item:hover {
-            background: rgba(138, 43, 226, 0.2);
-            padding-left: 25px;
+            background: rgba(138, 43, 226, 0.15);
         }
         
         .category-item i {
             color: var(--primary);
-            width: 20px;
+            width: 16px;
+            font-size: 0.9rem;
             text-align: center;
         }
         
         /* Header Styles */
         .header {
             background: linear-gradient(135deg, var(--dark), var(--darker));
-            padding: 3rem 1rem;
+            padding: 2rem 1rem;
             text-align: center;
             position: relative;
             overflow: hidden;
         }
         
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(138, 43, 226, 0.1), transparent);
-            z-index: 1;
-        }
-        
         .logo-container {
             position: relative;
             z-index: 2;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
         
         .logo {
             max-width: 100%;
             width: auto;
             height: auto;
-            max-height: 280px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            max-height: 200px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             border: 2px solid var(--primary);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        .logo:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 15px 35px rgba(138, 43, 226, 0.3);
         }
         
         .header h1 {
-            font-size: 2.8rem;
+            font-size: 1.8rem;
             margin-bottom: 0.5rem;
             background: linear-gradient(45deg, var(--primary), var(--accent));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            font-weight: 800;
-            letter-spacing: 1px;
-            animation: glow 2s ease-in-out infinite alternate;
+            font-weight: 700;
         }
         
         .header p {
-            font-size: 1.3rem;
+            font-size: 1rem;
             opacity: 0.9;
-            margin-bottom: 2rem;
-            max-width: 800px;
+            margin-bottom: 1.5rem;
+            max-width: 600px;
             margin-left: auto;
             margin-right: auto;
         }
         
-        /* Floating Audio Player - Reduced size */
+        /* Floating Audio Player */
         .floating-audio {
             position: fixed;
-            bottom: 15px;
-            right: 15px;
-            width: 240px;
+            bottom: 10px;
+            right: 10px;
+            width: 200px;
             background: rgba(18, 18, 18, 0.95);
-            border-radius: 30px;
-            padding: 8px 15px;
-            box-shadow: 0 5px 20px rgba(138, 43, 226, 0.6);
+            border-radius: 20px;
+            padding: 6px 12px;
+            box-shadow: 0 3px 10px rgba(138, 43, 226, 0.4);
             display: flex;
             align-items: center;
             z-index: 1000;
             backdrop-filter: blur(10px);
             border: 1px solid var(--primary);
-            transition: all 0.3s ease;
-        }
-        
-        .floating-audio:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(138, 43, 226, 0.8);
         }
         
         .floating-audio .audio-text {
-            margin-right: 10px;
-            font-size: 0.8rem;
+            margin-right: 8px;
+            font-size: 0.75rem;
             color: var(--light);
             white-space: nowrap;
-            font-weight: 500;
         }
         
         .floating-audio audio {
             width: 100%;
             outline: none;
-            border-radius: 30px;
-            height: 30px;
+            border-radius: 20px;
+            height: 25px;
         }
         
         .floating-audio .close-btn {
             background: none;
             border: none;
             color: var(--light);
-            font-size: 1rem;
-            margin-left: 8px;
+            font-size: 0.9rem;
+            margin-left: 6px;
             cursor: pointer;
-            transition: color 0.3s ease;
-        }
-        
-        .floating-audio .close-btn:hover {
-            color: var(--accent);
         }
         
         /* Section Styles */
         .section {
             background: var(--dark);
-            border-radius: 15px;
-            padding: 2.5rem;
-            margin: 2rem 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.2rem 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
             border: 1px solid var(--gray);
             position: relative;
             overflow: hidden;
-            opacity: 1;
-            transform: translateY(0);
         }
         
         .section::before {
@@ -251,30 +216,30 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 5px;
+            width: 4px;
             height: 100%;
             background: linear-gradient(to bottom, var(--primary), var(--accent));
         }
         
         .section h2 {
-            font-size: 1.9rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
             color: var(--light);
             display: flex;
             align-items: center;
         }
         
         .section h2 i {
-            margin-right: 12px;
+            margin-right: 8px;
             color: var(--primary);
-            font-size: 1.5rem;
+            font-size: 1.2rem;
         }
         
         .section p {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             opacity: 0.9;
-            font-size: 1.1rem;
-            line-height: 1.7;
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
         
         /* Button Styles */
@@ -282,145 +247,85 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 1.1rem 2.2rem;
-            border-radius: 50px;
+            padding: 0.7rem 1.2rem;
+            border-radius: 20px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1.05rem;
-            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 0.85rem;
+            transition: all 0.2s ease;
             border: none;
             cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-        
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.15);
-            transition: all 0.4s ease;
-            z-index: -1;
-        }
-        
-        .btn:hover::before {
-            width: 100%;
         }
         
         .btn:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.25);
-        }
-        
-        .btn:active {
-            transform: translateY(0);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
         }
         
         .btn i {
-            margin-right: 10px;
-            font-size: 1.2rem;
-        }
-        
-        .btn-heroku {
-            background: var(--heroku);
-            color: white;
-            box-shadow: 0 7px 20px rgba(67, 0, 152, 0.4);
-        }
-        
-        .btn-pterodactyl {
-            background: var(--pterodactyl);
-            color: white;
-            box-shadow: 0 7px 20px rgba(47, 54, 64, 0.4);
+            margin-right: 6px;
+            font-size: 0.9rem;
         }
         
         .btn-session {
             background: var(--session);
             color: white;
-            box-shadow: 0 7px 20px rgba(0, 191, 143, 0.4);
+            box-shadow: 0 3px 8px rgba(0, 191, 143, 0.3);
         }
         
         .btn-channel {
             background: var(--whatsapp);
             color: white;
-            box-shadow: 0 7px 20px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 3px 8px rgba(37, 211, 102, 0.3);
         }
         
         .btn-support {
             background: linear-gradient(45deg, var(--primary), var(--accent));
             color: white;
-            box-shadow: 0 7px 20px rgba(138, 43, 226, 0.4);
+            box-shadow: 0 3px 8px rgba(138, 43, 226, 0.3);
         }
         
         /* Button Container */
         .btn-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 1.2rem;
+            gap: 0.8rem;
             justify-content: center;
-            margin: 1.8rem 0;
+            margin: 1.2rem 0;
         }
         
         /* Deployment Buttons */
         .deployment-buttons {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 1.2rem;
-            margin: 2rem 0;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 0.8rem;
+            margin: 1.2rem 0;
         }
         
         .deploy-btn {
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            padding: 1.2rem 1.5rem;
-            background: var(--gray);
+            padding: 0.6rem 0.8rem;
             color: white;
             text-decoration: none;
-            border-radius: 12px;
-            transition: all 0.3s ease;
+            border-radius: 8px;
+            transition: all 0.2s ease;
             font-weight: 500;
-            text-align: left;
-            min-height: 70px;
-            border: 1px solid rgba(138, 43, 226, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .deploy-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 100%;
-            background: rgba(138, 43, 226, 0.1);
-            transition: all 0.4s ease;
-            z-index: 0;
-        }
-        
-        .deploy-btn:hover::before {
-            width: 100%;
+            font-size: 0.8rem;
+            min-height: 40px;
+            border: 1px solid transparent;
         }
         
         .deploy-btn:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 25px rgba(138, 43, 226, 0.3);
-            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
         }
         
         .deploy-btn i {
-            margin-right: 12px;
-            font-size: 1.4rem;
-            min-width: 30px;
-            z-index: 1;
-        }
-        
-        .deploy-btn span {
-            z-index: 1;
+            margin-right: 6px;
+            font-size: 0.9rem;
+            min-width: 18px;
         }
         
         /* Platform-specific colors */
@@ -455,21 +360,21 @@
         
         /* Feature Table */
         .features {
-            margin: 3rem 0;
+            margin: 1.5rem 0;
         }
         
         .feature-table {
             width: 100%;
             border-collapse: collapse;
             background: var(--dark);
-            border-radius: 12px;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            margin: 1.8rem 0;
+            margin: 1.2rem 0;
+            font-size: 0.85rem;
         }
         
         .feature-table th, .feature-table td {
-            padding: 1.3rem 1.5rem;
+            padding: 0.8rem 1rem;
             text-align: left;
             border-bottom: 1px solid var(--gray);
         }
@@ -477,149 +382,117 @@
         .feature-table th {
             background: var(--primary);
             color: white;
-            font-weight: 600;
-            font-size: 1.1rem;
+            font-weight: 500;
         }
         
         .feature-table tr:last-child td {
             border-bottom: none;
         }
         
-        .feature-table tr {
-            transition: all 0.3s ease;
-        }
-        
-        .feature-table tr:hover {
-            background: rgba(138, 43, 226, 0.1);
-        }
-        
         /* Workflow Code */
         .workflow-code {
             background: var(--gray);
             color: var(--light);
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin: 2rem 0;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1.2rem 0;
             overflow-x: auto;
             font-family: 'Courier New', monospace;
             position: relative;
-            border: 1px solid rgba(138, 43, 226, 0.2);
+            border: 1px solid rgba(138, 43, 226, 0.1);
+            font-size: 0.8rem;
         }
         
         .workflow-code pre {
             margin: 0;
             white-space: pre-wrap;
             word-wrap: break-word;
-            line-height: 1.5;
+            line-height: 1.4;
         }
         
         .copy-btn {
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 8px;
+            right: 8px;
             background: rgba(255, 255, 255, 0.1);
             border: none;
             color: white;
-            padding: 6px 12px;
-            border-radius: 6px;
+            padding: 4px 8px;
+            border-radius: 4px;
             cursor: pointer;
-            font-size: 0.85rem;
-            transition: all 0.2s ease;
+            font-size: 0.75rem;
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 4px;
         }
         
-        .copy-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-        
-        /* Footer - Reduced size */
+        /* Footer */
         .footer {
             text-align: center;
-            padding: 1.8rem;
-            margin-top: 3rem;
+            padding: 1rem;
+            margin-top: 2rem;
             background: var(--dark);
             border-top: 1px solid var(--gray);
         }
         
         .footer p {
             opacity: 0.7;
-            font-size: 0.95rem;
+            font-size: 0.8rem;
         }
         
         /* Responsive Styles */
         @media (max-width: 768px) {
             .header {
-                padding: 2rem 1rem;
+                padding: 1.5rem 1rem;
             }
             
             .header h1 {
-                font-size: 2.2rem;
+                font-size: 1.5rem;
             }
             
             .section {
-                padding: 1.8rem;
+                padding: 1.2rem;
             }
             
             .btn {
-                padding: 1rem 1.8rem;
-                font-size: 1rem;
-            }
-            
-            .btn-container {
-                flex-direction: column;
-                align-items: center;
+                padding: 0.6rem 1rem;
+                font-size: 0.8rem;
             }
             
             .deployment-buttons {
-                grid-template-columns: 1fr;
-            }
-            
-            .feature-table {
-                font-size: 0.95rem;
-            }
-            
-            .feature-table th, .feature-table td {
-                padding: 1rem;
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
             }
             
             .floating-audio {
-                width: calc(100% - 30px);
-                left: 15px;
-                right: 15px;
-                bottom: 10px;
+                width: calc(100% - 20px);
+                left: 10px;
+                right: 10px;
+                bottom: 8px;
             }
             
             .category-btn {
                 top: 10px;
                 right: 10px;
-                padding: 10px 18px;
-                font-size: 0.95rem;
+                padding: 6px 12px;
+                font-size: 0.8rem;
             }
             
             .category-menu {
-                top: 55px;
+                top: 45px;
                 right: 10px;
-                width: 200px;
+                width: 150px;
             }
         }
         
-        /* Animations */
+        /* Minimal Animations */
         @keyframes float {
             0% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
+            50% { transform: translateY(-5px); }
             100% { transform: translateY(0px); }
         }
         
-        @keyframes glow {
-            from { text-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary); }
-            to { text-shadow: 0 0 15px var(--primary), 0 0 20px var(--primary), 0 0 25px var(--accent); }
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
+        .logo {
+            animation: float 8s ease-in-out infinite;
         }
         
         /* Particle background effect */
@@ -636,8 +509,8 @@
         .particle {
             position: absolute;
             border-radius: 50%;
-            background: rgba(138, 43, 226, 0.3);
-            animation: float-particle 20s infinite linear;
+            background: rgba(138, 43, 226, 0.15);
+            animation: float-particle 25s infinite linear;
         }
         
         @keyframes float-particle {
@@ -646,33 +519,15 @@
                 opacity: 0;
             }
             10% {
-                opacity: 0.7;
+                opacity: 0.5;
             }
             90% {
-                opacity: 0.7;
+                opacity: 0.5;
             }
             100% {
                 transform: translateY(-100vh) translateX(100vw);
                 opacity: 0;
             }
-        }
-        
-        /* Neon glow effect */
-        .neon-text {
-            text-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary), 0 0 15px var(--primary), 0 0 20px var(--accent);
-            color: white;
-        }
-        
-        /* Section visibility animation */
-        .section {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        
-        .section.visible {
-            opacity: 1;
-            transform: translateY(0);
         }
     </style>
 </head>
@@ -682,7 +537,7 @@
     
     <!-- Category Button -->
     <button class="category-btn" id="categoryBtn">
-        <i class="fas fa-bars"></i> Categories
+        <i class="fas fa-bars"></i> Menu
     </button>
     
     <div class="category-menu" id="categoryMenu">
@@ -709,14 +564,14 @@
                 <img src="https://i.ibb.co/vCsY0jPS/lordcasey.jpg" alt="CASEYRHODES-XMD" class="logo">
             </div>
             
-            <h1 class="neon-text">CASEYRHODES XTECH.</h1>
-            <p>Advanced WhatsApp Bot with Powerful Features and Seamless Deployment Options</p>
+            <h1>CASEYRHODES XMD AUDIO</h1>
+            <p>Advanced WhatsApp Bot with Powerful Features</p>
         </div>
     </div>
 
-    <!-- Floating Audio Player - Reduced size -->
+    <!-- Floating Audio Player -->
     <div class="floating-audio">
-        <span class="audio-text">Now Playing:</span>
+        <span class="audio-text">Playing:</span>
         <audio controls autoplay loop>
             <source src="https://files.catbox.moe/0aoqzx.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
@@ -730,7 +585,7 @@
         <!-- Get Session section comes first -->
         <div class="section" id="get-session">
             <h2><i class="fas fa-qrcode"></i> Get Your Session ID</h2>
-            <p>Generate your WhatsApp session ID to deploy the bot and start using all the amazing features. This is the first step to get your bot running.</p>
+            <p>Generate your WhatsApp session ID to deploy the bot and start using all the amazing features.</p>
             <div class="btn-container">
                 <a href="https://six391-wkgc.onrender.com/" class="btn btn-session">
                     <i class="fas fa-qrcode"></i> Get Pairing Code
@@ -739,8 +594,8 @@
         </div>
 
         <div class="section" id="follow-channel">
-            <h2><i class="fas fa-bullhorn"></i> Follow Our Official Channel</h2>
-            <p>Stay updated with the latest features, announcements, and updates from CASEYRHODES XMD. Join our community today!</p>
+            <h2><i class="fas fa-bullhorn"></i> Follow Our Channel</h2>
+            <p>Stay updated with the latest features and announcements from CASEYRHODES XMD.</p>
             <div class="btn-container">
                 <a href="https://whatsapp.com/channel/0029VakUEfb4o7qVdkwPk83E" class="btn btn-channel">
                     <i class="fab fa-whatsapp"></i> Join Channel
@@ -750,7 +605,7 @@
 
         <div class="section" id="deploy-bot">
             <h2><i class="fas fa-rocket"></i> Deploy Your Bot</h2>
-            <p>Choose your preferred deployment method to get started with CASEYRHODES XMD. All platforms offer easy one-click deployment.</p>
+            <p>Choose your preferred deployment method to get started with CASEYRHODES XMD.</p>
             
             <div class="deployment-buttons">
                 <a href="https://dashboard.heroku.com/new?template=https://github.com/caseyweb/CASEYRHODES-XMD/tree/main" class="deploy-btn heroku" target="_blank">
@@ -815,7 +670,7 @@
 
         <div class="section" id="auto-update">
             <h2><i class="fas fa-sync-alt"></i> Auto-Update Feature</h2>
-            <p>Your bot updates automatically with the latest features and security improvements. No manual intervention required.</p>
+            <p>Your bot updates automatically with the latest features and security improvements.</p>
             
             <div class="workflow-code">
                 <button class="copy-btn" onclick="copyCode()">
@@ -865,18 +720,18 @@ jobs:
         // Create particle background
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
-            const particleCount = 30;
+            const particleCount = 20;
             
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
                 particle.classList.add('particle');
                 
                 // Random properties
-                const size = Math.random() * 10 + 2;
+                const size = Math.random() * 6 + 2;
                 const posX = Math.random() * 100;
                 const posY = Math.random() * 100;
                 const delay = Math.random() * 15;
-                const duration = Math.random() * 10 + 20;
+                const duration = Math.random() * 10 + 25;
                 
                 // Apply styles
                 particle.style.width = `${size}px`;
@@ -888,20 +743,6 @@ jobs:
                 
                 particlesContainer.appendChild(particle);
             }
-        }
-        
-        // Scroll animation for sections
-        function checkScroll() {
-            const sections = document.querySelectorAll('.section');
-            const triggerBottom = window.innerHeight * 0.85;
-            
-            sections.forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
-                
-                if (sectionTop < triggerBottom) {
-                    section.classList.add('visible');
-                }
-            });
         }
         
         // Copy code functionality
@@ -919,42 +760,35 @@ jobs:
         // Toggle floating audio player
         document.getElementById('minimize-audio').addEventListener('click', function() {
             const audioPlayer = document.querySelector('.floating-audio');
-            audioPlayer.style.transform = 'translateY(100px)';
-            audioPlayer.style.opacity = '0';
+            audioPlayer.style.display = 'none';
             
-            setTimeout(() => {
-                audioPlayer.style.display = 'none';
-                
-                // Create a button to show audio again
-                const showAudioBtn = document.createElement('button');
-                showAudioBtn.innerHTML = '<i class="fas fa-music"></i>';
-                showAudioBtn.style.position = 'fixed';
-                showAudioBtn.style.bottom = '15px';
-                showAudioBtn.style.right = '15px';
-                showAudioBtn.style.width = '45px';
-                showAudioBtn.style.height = '45px';
-                showAudioBtn.style.borderRadius = '50%';
-                showAudioBtn.style.background = 'var(--primary)';
-                showAudioBtn.style.color = 'white';
-                showAudioBtn.style.border = 'none';
-                showAudioBtn.style.cursor = 'pointer';
-                showAudioBtn.style.zIndex = '1000';
-                showAudioBtn.style.boxShadow = '0 5px 15px rgba(138, 43, 226, 0.5)';
-                showAudioBtn.id = 'show-audio-btn';
-                showAudioBtn.style.display = 'flex';
-                showAudioBtn.style.alignItems = 'center';
-                showAudioBtn.style.justifyContent = 'center';
-                showAudioBtn.style.fontSize = '1.2rem';
-                
-                showAudioBtn.addEventListener('click', function() {
-                    audioPlayer.style.display = 'flex';
-                    audioPlayer.style.transform = 'translateY(0)';
-                    audioPlayer.style.opacity = '1';
-                    this.remove();
-                });
-                
-                document.body.appendChild(showAudioBtn);
-            }, 300);
+            // Create a button to show audio again
+            const showAudioBtn = document.createElement('button');
+            showAudioBtn.innerHTML = '<i class="fas fa-music"></i>';
+            showAudioBtn.style.position = 'fixed';
+            showAudioBtn.style.bottom = '10px';
+            showAudioBtn.style.right = '10px';
+            showAudioBtn.style.width = '35px';
+            showAudioBtn.style.height = '35px';
+            showAudioBtn.style.borderRadius = '50%';
+            showAudioBtn.style.background = 'var(--primary)';
+            showAudioBtn.style.color = 'white';
+            showAudioBtn.style.border = 'none';
+            showAudioBtn.style.cursor = 'pointer';
+            showAudioBtn.style.zIndex = '1000';
+            showAudioBtn.style.boxShadow = '0 3px 8px rgba(138, 43, 226, 0.4)';
+            showAudioBtn.id = 'show-audio-btn';
+            showAudioBtn.style.display = 'flex';
+            showAudioBtn.style.alignItems = 'center';
+            showAudioBtn.style.justifyContent = 'center';
+            showAudioBtn.style.fontSize = '1rem';
+            
+            showAudioBtn.addEventListener('click', function() {
+                audioPlayer.style.display = 'flex';
+                this.remove();
+            });
+            
+            document.body.appendChild(showAudioBtn);
         });
         
         // Category menu functionality
@@ -995,17 +829,7 @@ jobs:
         // Initialize on page load
         window.addEventListener('load', function() {
             createParticles();
-            checkScroll();
-            
-            // Animate sections sequentially
-            const sections = document.querySelectorAll('.section');
-            sections.forEach((section, index) => {
-                section.style.transitionDelay = `${index * 0.2}s`;
-            });
         });
-        
-        // Check scroll on scroll event
-        window.addEventListener('scroll', checkScroll);
     </script>
 </body>
 </html>
