@@ -294,12 +294,15 @@
             margin: 1.2rem 0;
         }
         
-        /* Deployment Buttons */
+        /* Deployment Buttons - Vertical Layout */
         .deployment-buttons {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            gap: 0.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
             margin: 1.2rem 0;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .deploy-btn {
@@ -307,6 +310,7 @@
             align-items: center;
             justify-content: flex-start;
             padding: 0.6rem 0.8rem;
+            background: var(--gray);
             color: white;
             text-decoration: none;
             border-radius: 8px;
@@ -314,48 +318,52 @@
             font-weight: 500;
             font-size: 0.8rem;
             min-height: 40px;
-            border: 1px solid transparent;
+            border: 1px solid rgba(138, 43, 226, 0.1);
         }
         
         .deploy-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+            background: rgba(138, 43, 226, 0.1);
         }
         
         .deploy-btn i {
-            margin-right: 6px;
-            font-size: 0.9rem;
-            min-width: 18px;
+            margin-right: 8px;
+            font-size: 1rem;
+            min-width: 20px;
+            text-align: center;
         }
         
-        /* Platform-specific colors */
-        .deploy-btn.heroku {
-            background: var(--heroku);
+        /* Platform-specific icon colors */
+        .deploy-btn .fa-heroku {
+            color: var(--heroku);
         }
         
-        .deploy-btn.render {
-            background: var(--render);
+        .deploy-btn .fa-server {
+            color: var(--render);
         }
         
-        .deploy-btn.talkdrove {
-            background: var(--talkdrove);
+        .deploy-btn .fa-cloud {
+            color: var(--talkdrove);
         }
         
-        .deploy-btn.replit {
-            background: var(--replit);
+        .deploy-btn .fa-code {
+            color: var(--replit);
         }
         
-        .deploy-btn.codespace {
-            background: var(--codespace);
+        .deploy-btn .fa-laptop-code {
+            color: var(--codespace);
         }
         
-        .deploy-btn.glitch {
-            background: var(--glitch);
+        .deploy-btn .fa-project-diagram {
+            color: var(--glitch);
         }
         
-        .deploy-btn.railway {
+        .deploy-btn .fa-train {
+            color: #fff;
             background: var(--railway);
-            border: 1px solid #333;
+            padding: 2px;
+            border-radius: 3px;
         }
         
         /* Feature Table */
@@ -460,7 +468,7 @@
             }
             
             .deployment-buttons {
-                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                max-width: 100%;
             }
             
             .floating-audio {
@@ -608,25 +616,25 @@
             <p>Choose your preferred deployment method to get started with CASEYRHODES XMD.</p>
             
             <div class="deployment-buttons">
-                <a href="https://dashboard.heroku.com/new?template=https://github.com/caseyweb/CASEYRHODES-XMD/tree/main" class="deploy-btn heroku" target="_blank">
+                <a href="https://dashboard.heroku.com/new?template=https://github.com/caseyweb/CASEYRHODES-XMD/tree/main" class="deploy-btn" target="_blank">
                     <i class="fab fa-heroku"></i> <span>Heroku</span>
                 </a>
-                <a href="https://dashboard.render.com/web/new" class="deploy-btn render" target="_blank">
+                <a href="https://dashboard.render.com/web/new" class="deploy-btn" target="_blank">
                     <i class="fas fa-server"></i> <span>Render</span>
                 </a>
-                <a href="https://host.talkdrove.com/dashboard/select-bot/prepare-deployment?botId=39" class="deploy-btn talkdrove" target="_blank">
+                <a href="https://host.talkdrove.com/dashboard/select-bot/prepare-deployment?botId=39" class="deploy-btn" target="_blank">
                     <i class="fas fa-cloud"></i> <span>Talkdrove</span>
                 </a>
-                <a href="https://repl.it/github/caseyweb/CASEYRHODES-XMD" class="deploy-btn replit" target="_blank">
+                <a href="https://repl.it/github/caseyweb/CASEYRHODES-XMD" class="deploy-btn" target="_blank">
                     <i class="fas fa-code"></i> <span>Replit</span>
                 </a>
-                <a href="https://github.com/codespaces/new" class="deploy-btn codespace" target="_blank">
+                <a href="https://github.com/codespaces/new" class="deploy-btn" target="_blank">
                     <i class="fas fa-laptop-code"></i> <span>Codespace</span>
                 </a>
-                <a href="https://glitch.com/signup" class="deploy-btn glitch" target="_blank">
+                <a href="https://glitch.com/signup" class="deploy-btn" target="_blank">
                     <i class="fas fa-project-diagram"></i> <span>Glitch</span>
                 </a>
-                <a href="https://railway.app/new" class="deploy-btn railway" target="_blank">
+                <a href="https://railway.app/new" class="deploy-btn" target="_blank">
                     <i class="fas fa-train"></i> <span>Railway</span>
                 </a>
             </div>
